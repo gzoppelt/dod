@@ -1,16 +1,15 @@
 'use strict';
 
-var app = angular.module('collectionBindingApp', [
-    'ui.router',
+var app = angular.module('ajaxApp', [
     'ngRoute',
-    'employee'
+    'postcode'
 ]);
 
 app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'src/employee/employee.html',
-      controller: 'EmployeeController'
+      templateUrl: 'src/postcode/postcode.html',
+      controller: 'PostcodeController'
     })
     .otherwise({
       redirectTo: '/'

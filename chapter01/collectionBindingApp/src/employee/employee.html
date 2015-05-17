@@ -1,8 +1,8 @@
 <div>
   <h1>Employee data:</h1>
-  In a list -
+  In a list - filtering old employees only
   <ul>
-    <li ng-repeat="employee in employeeData.employees">
+    <li ng-repeat="employee in employeeData.employees | oldEmployeeFilter ">
       Employee number {{$index}} is - {{employee.name}}
     </li>
   </ul>

@@ -1,9 +1,8 @@
 'use strict';
 
-var app = angular.module('collectionBindingApp', [
-    'ui.router',
-    'ngRoute',
-    'employee'
+var app = angular.module('directiveApp', [
+  'ngRoute',
+  'employee'
 ]);
 
 app.config(function ($routeProvider) {

@@ -9,7 +9,9 @@ angular.module('employee', [])
         var getEmployees = function () {
           return [
             new Employee("First employee", 56),
+            new Employee("First old employe", 58),
             new Employee("Second employee", 44),
+            new Employee("Second old employee", 59),
             new Employee("Last employee", 32)
           ];
         };
@@ -18,4 +20,11 @@ angular.module('employee', [])
           employees: getEmployees()
         };
     }])
+    .filter('oldEmployeeFilter', function () {
+        return function (items) {
+            return _.filter(items, function (item) {
+                return item.age >= 58;
+            });
+        };
+    })
 ;
